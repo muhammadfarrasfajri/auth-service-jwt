@@ -1,0 +1,105 @@
+### Register
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username":"koboy12",
+    "email":"koboy12312@gmail.com",
+    "password":"Apatuh123@"
+}
+
+### Login
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email":"sherahahaha@gmail.com",
+    "password":"Babubesar123@"
+}
+
+### Refresh Token
+POST http://localhost:3000/api/users/refresh
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtvYm95Iiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NjI5MTE5MjMsImV4cCI6MTc2Mjk5ODMyM30.6jhqc4JmGJobt3-kluiZQ294Xf8Tc2z3sbdo_sy2IzM
+
+
+### Logout
+POST http://localhost:3000/api/users/logout/
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtvYm95Iiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NjI4NzE4MTEsImV4cCI6MTc2Mjk1ODIxMX0.XtFCF0xxOwPM1NXLFbRPlftgGM3pez0jqe8UqeqCg-Y
+
+### Get All User
+GET http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtvYm95Iiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NjI5MTE5MjMsImV4cCI6MTc2Mjk5ODMyM30.6jhqc4JmGJobt3-kluiZQ294Xf8Tc2z3sbdo_sy2IzM
+
+
+### Get User
+GET http://localhost:3000/api/users/anton
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtvYm95Iiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NjI5MTE5MjMsImV4cCI6MTc2Mjk5ODMyM30.6jhqc4JmGJobt3-kluiZQ294Xf8Tc2z3sbdo_sy2IzM
+
+### Update User
+PATCH  http://localhost:3000/api/users/koboy12
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpva2l3aSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2MjkxMjgxMywiZXhwIjoxNzYyOTk5MjEzfQ.WGwMkvL8DaLFOd4OVBQeMJLUCSrBCJ7y-leohVHIrpE
+
+{
+    "username":"Jokiwi",
+    "email":"sherahahaha@gmail.com",
+    "password":"Apatuh123@"
+}
+
+### Delete User
+DELETE  http://localhost:3000/api/users/jokiwi
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtvYm95Iiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NjI4NzE4MTEsImV4cCI6MTc2Mjk1ODIxMX0.XtFCF0xxOwPM1NXLFbRPlftgGM3pez0jqe8UqeqCg-Y
+
+
+### Get All Product
+GET http://localhost:3000/api/users/jokiwi/products/
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtvYm95Iiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NjI4NzE4MTEsImV4cCI6MTc2Mjk1ODIxMX0.XtFCF0xxOwPM1NXLFbRPlftgGM3pez0jqe8UqeqCg-Y
+
+### Get Product
+GET http://localhost:3000/api/users/jikiwi/products/
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer
+
+### Create Product
+POST http://localhost:3000/api/users/jikiwi/products/
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtvYm95Iiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NjI4NzE4MTEsImV4cCI6MTc2Mjk1ODIxMX0.XtFCF0xxOwPM1NXLFbRPlftgGM3pez0jqe8UqeqCg-Y
+
+{
+    "name":"topeng",
+    "price":1
+}
+
+### Update Product
+POST http://localhost:3000/api/users/jikiwi/products/1c500db6-dfd3-4fc1-9d6f-d5ffd5a32a47
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtvYm95Iiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NjI5MTA4ODMsImV4cCI6MTc2Mjk5NzI4M30.UjSFNtDL3P5ml6xZTLmO9KtDvHM85LUbm_NrnriLCUM
+
+{
+    "name":"drum",
+    "price":100555
+}
+
+### Delete Product
+DELETE http://localhost:3000/api/products/
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer

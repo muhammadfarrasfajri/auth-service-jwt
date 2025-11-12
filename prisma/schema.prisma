@@ -7,13 +7,11 @@ generator client {
 }
 
 model Users {
-  id        Int        @id @default(autoincrement())
-  uuid      String     @default(uuid()) @unique
-  name      String
-  email     String     @unique
-  password  String
+  username  String     @id @db.VarChar(100)
+  email     String     @unique @db.VarChar(100)
+  password  String     @db.VarChar(100)
   role      String     @default("user")
-  refreshToken String?
+  refreshToken String? @db.VarChar(300)
   products  Products[]
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
@@ -22,12 +20,11 @@ model Users {
 }
 
 model Products {
-  id        Int        @id @default(autoincrement())
-  uuid      String     @default(uuid()) @unique
-  name      String
-  price     Int
-  userId    Int
-  user      Users      @relation(fields: [userId], references: [id])
+  uuid      String     @id @default(uuid())
+  name      String     @db.VarChar(100)
+  price     Int        @db.Int
+  username  String     @db.VarChar(100)
+  user      Users      @relation(fields: [username], references: [username])
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
   @@map("product")
