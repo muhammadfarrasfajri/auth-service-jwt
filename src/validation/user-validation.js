@@ -17,7 +17,7 @@ const updateUserValidation = Joi.object({
     .max(100)
     .pattern(new RegExp(/^[a-zA-Z0-9!@#$%^&*(),.?":{}|<>]{8,30}$/))
     .optional(),
-  role: Joi.string().max(20).optional(),
+  role: Joi.string().optional(),
 });
 
 const searchUserValidation = Joi.object({

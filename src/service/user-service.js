@@ -32,10 +32,9 @@ const create = async (user) => {
 };
 
 const update = async (user, updateUser) => {
-  const userRequest = validate(getUserValidator, user);
   const data = validate(updateUserValidation, updateUser);
 
-  const checkUser = await userRepository.get(userRequest);
+  const checkUser = await userRepository.get(user);
   if (!checkUser) throw new ResponseError(404, "user not found");
 
   if (
@@ -52,7 +51,7 @@ const update = async (user, updateUser) => {
     data.password = await argon2.hash(data.password);
   }
 
-  return await userRepository.update(userRequest, data);
+  return await userRepository.update(user, data);
 };
 
 const remove = async (user) => {

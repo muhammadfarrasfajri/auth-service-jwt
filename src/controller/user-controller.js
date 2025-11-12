@@ -23,7 +23,8 @@ const create = async (req, res, next) => {
 const update = async (req, res, next) => {
   try {
     const user = req.user;
-    const result = await userService.update(user, req.body);
+    const data = req.body;
+    const result = await userService.update(user, data);
     return res
       .status(200)
       .json({ message: "Update user Successfully", data: result });
